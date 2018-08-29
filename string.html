@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //String:문자열을 저장하고 조작할 수 있는 객체
+    var text='Hello! Javascript!';
+    //생성자함수로 작성시
+    text=new String('Hello! Javascript!');
+    //text.toString();//문자열 출력시 toString()메서드는 생략가능
+
+    document.write('<h3>'+text+'</h3>');
+    document.write('문자열의 길이:'+text.length);
+
+    document.write('<h3>문자열의 위치찾기</h3>');
+    document.write('!의 위치:'+text.indexOf('!')+'<br>');
+    document.write('마지막 !의 위치:'+text.lastIndexOf('!')+'<br>');
+    document.write('특정위치부터 !의 위치:'+text.indexOf('!',6)+'<br>');
+
+    document.write('<h3>문자열자르기</h3>');
+    document.write(text.slice(7)+'<br>');
+    document.write(text.slice(0,6)+'<br>');
+    document.write(text.substring(7)+'<br>');
+    document.write(text.substring(0,text.length-1)+'<br>');
+    //slice(뒤에서부터 찾기 가능)와 substring의 차이는 -값을 넣을수 있냐 없냐의 차이
+    //-는 뒤에서부터 찾을 때 사용
+
+    document.write('<h3>문자열 바꾸기</h3>');
+    document.write(text.replace('!','~')+'<br>');
+    document.write(text.replace(/!/g,'~')+'<br>');///!/g=>정규표현식
+    document.write(text.toUpperCase()+'<br>');
+    document.write(text.toLowerCase()+'<br>');
+
+    document.write('<h3>해당위치(인덱스)의 문자반환</h3>');
+    document.write(text.charAt(5));//indexOf()의 반대
+
+  </script>
+</body>
+</html>
